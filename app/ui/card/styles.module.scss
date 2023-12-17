@@ -1,0 +1,39 @@
+.wrapper {
+  background-color: var(--background-soft);
+  padding: rem(20px);
+  border-radius: rem(10px);
+  display: flex;
+  gap: rem(20px);
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--background-active);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.number {
+  font-size: rem(24px);
+  font-weight: 500;
+}
+
+.detail {
+  font-size: rem(14px);
+  font-weight: 300;
+
+  &__change {
+    &[data-with-change='true'] {
+      color: $color-lime;
+    }
+
+    &[data-with-change='false'] {
+      color: $color-red;
+    }
+  }
+}

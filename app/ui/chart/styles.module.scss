@@ -1,0 +1,12 @@
+.wrapper {
+  height: rem(450px);
+  background-color: var(--background-soft);
+  padding: rem(20px);
+  border-radius: rem(10px);
+}
+
+.title {
+  font-weight: 200;
+  color: var(--secondary-text);
+  margin-bottom: rem(20px);
+}

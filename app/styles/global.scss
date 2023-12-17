@@ -1,14 +1,20 @@
 :root {
   --background-start: #151c2c;
-  --background-end: #182237;
-  --primary-text: white;
+  --background-soft: #182237;
+  --background-active: #2e374a;
+
+  --primary-text: #ffffff;
   --secondary-text: #b7bac1;
 }
+
+// fedcba987654321
+// 123456789abcdef
 
 @media (prefers-color-scheme: light) {
   :root {
     --background-start: #eae3d3;
-    --background-end: #e7ddc8;
+    --background-soft: #e7ddc8;
+    --background-active: #e2d8c6;
     --primary-text: #000000;
     --secondary-text: #48453e;
   }

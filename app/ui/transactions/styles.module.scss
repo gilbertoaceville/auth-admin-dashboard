@@ -1,0 +1,49 @@
+.wrapper {
+  background-color: var(--background-soft);
+  padding: rem(20px);
+  border-radius: rem(10px);
+}
+
+.title {
+  margin-bottom: rem(20px);
+  font-weight: 200;
+  color: var(--secondary-text);
+}
+
+.table {
+  width: 100%;
+}
+
+.table td  {
+  padding: rem(10px);
+}
+
+.user {
+  display: flex;
+  gap: rem(10px);
+  align-items: center;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.status {
+  border-radius: rem(5px);
+  padding: rem(5px);
+  font-size: rem(14px);
+  color: var(--primary-text);
+
+  &[data-status='pending'] {
+    background-color: $color-coffee;
+  }
+
+  &[data-status='done'] {
+    background-color: $color-gray;
+  }
+
+  &[data-status='cancelled'] {
+    background-color: $color-brown;
+  }
+}

@@ -1,3 +1,9 @@
+import DashboardTemplate from '@/components/template/dashboard-template';
+
 export default function Dashboard() {
-    return <div>Dashboard</div>
+  return (
+    <main>
+      <DashboardTemplate />
+    </main>
+  );
 }

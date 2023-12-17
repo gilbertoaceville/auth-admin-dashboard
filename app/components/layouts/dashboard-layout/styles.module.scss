@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+}
+
+.sideBar {
+  flex: 1;
+  background: var(--background-soft);
+  padding: rem(20px);
+  min-height: 100vh;
+}
+
+.content {
+  flex: 4;
+  padding: rem(20px);
+}

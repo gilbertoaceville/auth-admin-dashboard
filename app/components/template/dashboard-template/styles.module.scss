@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  gap: rem(20px);
+  margin-top: rem(20px);
+}
+
+.content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.cards {
+  display: flex;
+  gap: rem(20px);
+  justify-content: space-between;
+}
+
+.side {
+  flex: 1;
+}
