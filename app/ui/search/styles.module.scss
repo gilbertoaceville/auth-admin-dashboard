@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+  padding: rem(10px);
+  border-radius: rem(10px);
+  width: max-content;
+  background-color: var(--background-active);
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: var(--primary-text);
+  background-color: transparent;
+}

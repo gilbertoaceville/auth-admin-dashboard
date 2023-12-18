@@ -1,3 +1,5 @@
+import ContentTemplate from '@/components/template/content';
+
 export default function Users() {
-    return <div>Users</div>
+  return <ContentTemplate />;
 }

@@ -1,0 +1,62 @@
+.wrapper {
+  background-color: var(--background-soft);
+  padding: rem(20px);
+  border-radius: rem(10px);
+  margin-top: rem(20px);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(20px);
+}
+
+.cta {
+  padding: rem(10px);
+  background-color: $color-purple;
+  color: var(--primary-text);
+  border: none;
+  border-radius: rem(5px);
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding: rem(10px);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: rem(10px);
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: rem(10px);
+}
+
+.button {
+  padding: rem(5px) rem(10px);
+  border-radius: rem(5px);
+  color: var(--primary-text);
+  border: none;
+  cursor: pointer;
+}
+
+.view {
+  background-color: $color-teal;
+}
+
+.delete {
+  background-color: $color-crimson;
+}

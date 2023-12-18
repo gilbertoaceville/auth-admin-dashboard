@@ -1,0 +1,22 @@
+.wrapper {
+  padding: rem(10px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: rem(5px) rem(10px);
+  background-color: $color-gray;
+  outline: none;
+  border: 1px solid $color-gray;
+  border-radius: rem(4px);
+  color: var(--primary-text);
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $color-black;
+    background-color: $color-shade;
+    opacity: 0.5;
+  }
+}
