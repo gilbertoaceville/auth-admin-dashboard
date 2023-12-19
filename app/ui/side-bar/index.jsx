@@ -39,7 +39,7 @@ export default function SideBar() {
       <div className={styles.account}>
         <Image
           className={styles.avatar}
-          src="/noavatar.png"
+          src="/profile.png"
           alt="user"
           width={50}
           height={50}

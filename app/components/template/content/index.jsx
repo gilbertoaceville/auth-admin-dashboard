@@ -12,7 +12,7 @@ export default function ContentTemplate({
   addLink = '/dashboard/users/add',
   viewLink = '/dashboard/users/1',
   titleArray = userTitle,
-  src = "/noavatar.png"
+  src = "/profile.png"
 }) {
   return (
     <div className={styles.wrapper}>

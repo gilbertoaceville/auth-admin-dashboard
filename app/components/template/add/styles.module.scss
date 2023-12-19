@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: var(--background-soft);
+  background-color: var(--background-secondary);
   padding: rem(20px);
   border-radius: rem(10px);
   margin-top: rem(20px);
@@ -15,9 +15,9 @@
 .form textarea,
 .form select {
   padding: rem(30px);
-  background-color: var(--background-start);
+  background-color: var(--background-primary);
   color: var(--primary-text);
-  border: 2px solid var(--background-active);
+  border: 2px solid var(--background-tertiary);
   border-radius: rem(5px);
   margin-bottom: rem(30px);
   outline: none;

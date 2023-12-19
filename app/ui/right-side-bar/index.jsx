@@ -8,7 +8,7 @@ export default function RightSideBar() {
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.imageContainer}>
-          <Image className={styles.image} src="/astronaut.png" alt="" fill />
+          <Image className={styles.image} src="/astro.png" alt="" fill />
         </div>
         <div className={styles.text}>
           <span className={styles.notification}>🔥 Available Now</span>

@@ -19,7 +19,7 @@ export default function Transactions() {
             <td>
               <div className={styles.user}>
                 <Image
-                  src="/noavatar.png"
+                  src="/profile.png"
                   alt="user"
                   height={40}
                   width={40}

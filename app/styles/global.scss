@@ -1,8 +1,8 @@
 :root {
-  --background-start: #151c2c;
-  --background-soft: #182237;
-  --background-active: #2e374a;
   --background: #ffffff;
+  --background-primary: #151c2c;
+  --background-secondary: #182237;
+  --background-tertiary: #2e374a;
 
   --primary-text: #ffffff;
   --secondary-text: #b7bac1;
@@ -13,9 +13,9 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-start: #eae3d3;
-    --background-soft: #e7ddc8;
-    --background-active: #e2d8c6;
+    --background-primary: #eae3d3;
+    --background-secondary: #e7ddc8;
+    --background-tertiary: #e2d8c6;
     --background: #000000;
 
     --primary-text: #000000;
@@ -31,7 +31,7 @@
 
 html,
 body {
-  background-color: var(--background-start);
+  background-color: var(--background-primary);
   color: var(--primary-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

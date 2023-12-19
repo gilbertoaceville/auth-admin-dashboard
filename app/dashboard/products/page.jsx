@@ -8,7 +8,7 @@ export default function Products() {
       addLink="/dashboard/products/add"
       viewLink="/dashboard/products/1"
       titleArray={productTitle}
-      src='/noproduct.jpg'
+      src='/product.jpg'
     />
   );
 }
