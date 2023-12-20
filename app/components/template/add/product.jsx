@@ -1,9 +1,10 @@
+import { createProduct } from '@/lib/mongoose/controllers/product';
 import styles from './styles.module.scss';
 
 export default function AddProductTemplate() {
   return (
     <div className={styles.wrapper}>
-      <form action="" className={styles.form}>
+      <form action={createProduct} className={styles.form}>
         <input type="text" placeholder="title" name="title" required />
         <select name="cat" id="cat">
           <option value="general">Choose a Category</option>

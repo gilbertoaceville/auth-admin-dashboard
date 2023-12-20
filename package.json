@@ -13,9 +13,11 @@
   "dependencies": {
     "@next/eslint-plugin-next": "^14.0.4",
     "autoprefixer": "^10.4.16",
+    "bcrypt": "^5.1.1",
     "clsx": "^2.0.0",
     "mongoose": "^8.0.3",
     "next": "14.0.4",
+    "next-auth": "^5.0.0-beta.3",
     "postcss": "^8.4.32",
     "react": "^18",
     "react-dom": "^18",

@@ -1,6 +1,6 @@
 import ContentTemplate from '@/components/template/content';
 import { userTitle } from '@/lib/content.data';
-import { fetchUsers } from '@/lib/mongoose/api';
+import { fetchUsers } from '@/lib/mongoose/controllers/user';
 
 export default async function Users({ searchParams }) {
   const queryParams = searchParams.q || '';

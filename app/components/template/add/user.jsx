@@ -1,9 +1,10 @@
+import { createUser } from '@/lib/mongoose/controllers/user';
 import styles from './styles.module.scss';
 
 export default function AddUserTemplate() {
   return (
     <div className={styles.wrapper}>
-      <form action="" className={styles.form}>
+      <form action={createUser} className={styles.form}>
         <input type="text" placeholder="username" name="username" required />
         <input type="email" placeholder="email" name="email" required />
         <input type="password" placeholder="password" name="password" required />

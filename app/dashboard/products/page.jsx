@@ -1,6 +1,6 @@
 import ContentTemplate from '@/components/template/content';
 import { productTitle } from '@/lib/content.data';
-import { fetchProducts } from '@/lib/mongoose/api';
+import { fetchProducts } from '@/lib/mongoose/controllers/product';
 
 export default async function Products({ searchParams }) {
   const queryParams = searchParams.q || '';
