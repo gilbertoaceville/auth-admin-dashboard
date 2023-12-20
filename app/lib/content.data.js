@@ -1,5 +1,5 @@
 export const userTitle = ['Name', 'Email', 'Created At', 'Role', 'Status', 'Action'];
-export const productTitle = ['Title', 'Description', 'Price', 'Stock', 'Action'];
+export const productTitle = ['Title', 'Description', 'Created At', 'Price', 'Stock', 'Action'];
 export const addProductInputs = [
   { type: 'number', placeholder: 'price', name: 'price', required: true },
   { type: 'number', placeholder: 'stock', name: 'stock', required: true },

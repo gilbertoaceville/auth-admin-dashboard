@@ -1,14 +1,22 @@
 import ContentTemplate from '@/components/template/content';
 import { productTitle } from '@/lib/content.data';
+import { fetchProducts } from '@/lib/mongoose/api';
 
-export default function Products() {
+export default async function Products({ searchParams }) {
+  const queryParams = searchParams.q || '';
+  const page = searchParams.page || 1;
+
+  const { count, products } = await fetchProducts(queryParams, page);
   return (
-    <ContentTemplate
-      placeholder="search for a user"
-      addLink="/dashboard/products/add"
-      viewLink="/dashboard/products/1"
-      titleArray={productTitle}
-      src='/product.jpg'
-    />
+    <>
+      <ContentTemplate
+        placeholder="search for a user"
+        addLink="/dashboard/products/add"
+        titleArray={productTitle}
+        src="/product.jpg"
+        data={products}
+        count={count}
+      />
+    </>
   );
 }
