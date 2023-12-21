@@ -29,7 +29,7 @@
 
   &__change {
     &[data-with-change='true'] {
-      color: $color-lime;
+      color: var(--card-text);
     }
 
     &[data-with-change='false'] {

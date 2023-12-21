@@ -1,0 +1,23 @@
+.wrapper {
+  position: fixed;
+  top: rem(38px);
+  right: rem(8px);
+  z-index: 999;
+  width: rem(100px);
+}
+
+.customSelect {
+    background: $color-teal;
+
+    & > div[role="list"] {
+        background: var(--background-secondary);
+    }
+
+    & input {
+        display: none;
+    }
+
+    & span {
+        font-size: 40px;
+    }
+}

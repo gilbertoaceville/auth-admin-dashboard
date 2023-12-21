@@ -1,17 +1,24 @@
-import { Inter } from 'next/font/google'
-import './styles/global.scss'
+import { Inter } from 'next/font/google';
+import './styles/global.scss';
+import ThemeToggle from './ui/theme-toggle';
+import { Providers } from './providers';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Admin Dashboard',
   description: 'Dashboard is built with next.js',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <Providers>
+          <ThemeToggle />
+          {children}
+        </Providers>
+      </body>
     </html>
-  )
+  );
 }

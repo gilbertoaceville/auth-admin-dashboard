@@ -3,7 +3,7 @@
 }
 
 .item {
-  background: linear-gradient(to top, #182237, #253352);
+  background: var(--background-gradient);
   padding: rem(20px) rem(24px);
   border-radius: rem(10px);
   margin-bottom: rem(20px);
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: rem(24px);
+  color: var(--secondary-text);
 }
 
 .notification {

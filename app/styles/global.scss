@@ -3,13 +3,24 @@
   --background-primary: #151c2c;
   --background-secondary: #182237;
   --background-tertiary: #2e374a;
+  --background-gradient: linear-gradient(to top, #182237, #253352);
 
   --primary-text: #ffffff;
   --secondary-text: #b7bac1;
+  --card-text: #00ff00;
 }
 
-// fedcba987654321
-// 123456789abcdef
+[data-theme='light'] {
+  --background: #000000;
+  --background-primary: #eae3d3;
+  --background-secondary: #e7ddc8;
+  --background-tertiary: #e2d8c6;
+  --background-gradient: linear-gradient(to top, #e7ddc8, #e2d8c6);
+
+  --primary-text: #000000;
+  --secondary-text: #48453e;
+  --card-text: #1a0fee;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
