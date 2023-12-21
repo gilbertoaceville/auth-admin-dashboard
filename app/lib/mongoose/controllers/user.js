@@ -110,13 +110,14 @@ export async function deleteUser(formData) {
 
 // prevState is added since we are using useFormState to get returned data ("/see LoginForm component")
 export async function loginUser(prevState, formData) {
+  const { username, password } = Object.fromEntries(formData);
   try {
-    connectToDB();
-    const { username, password } = Object.fromEntries(formData);
     // coming from auth.js with provider name as credentials (credentials - can be replaced if using other auth methods e.g google)
-    await signIn('credentials', { username, password });
+    await signIn('credentials', {username, password});
   } catch (error) {
-    console.error(error);
-    return 'Invalid Credentials!';
+    if (error.message.includes('CredentialsSignin')) {
+      return 'Wrong Credentials';
+    }
+    throw error;
   }
 }

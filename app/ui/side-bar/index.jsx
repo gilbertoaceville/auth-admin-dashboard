@@ -8,7 +8,6 @@ import { auth, signOut } from '@/auth';
 
 export default async function SideBar() {
   const session = await auth();
-  console.log(session);
 
   async function handleLogOut() {
     'use server';
