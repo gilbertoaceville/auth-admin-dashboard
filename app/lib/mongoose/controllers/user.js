@@ -6,6 +6,7 @@ import { User } from '../models/user';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import bcrypt from 'bcrypt';
+import { signIn } from '@/auth';
 
 export async function fetchUsers(searchParams, page) {
   const regex = RegExp(searchParams, 'i');
@@ -105,4 +106,17 @@ export async function deleteUser(formData) {
   }
 
   revalidatePath('/dashboard/users');
+}
+
+// prevState is added since we are using useFormState to get returned data ("/see LoginForm component")
+export async function loginUser(prevState, formData) {
+  try {
+    connectToDB();
+    const { username, password } = Object.fromEntries(formData);
+    // coming from auth.js with provider name as credentials (credentials - can be replaced if using other auth methods e.g google)
+    await signIn('credentials', { username, password });
+  } catch (error) {
+    console.error(error);
+    return 'Invalid Credentials!';
+  }
 }

@@ -1,60 +1,46 @@
-"use client";
+import Image from 'next/image';
+import { MdLogout } from 'react-icons/md';
 
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { MdLogout } from "react-icons/md";
+import RenderLink from './component/render-link';
+import styles from './styles.module.scss';
+import { sideBarItems } from './const';
+import { auth, signOut } from '@/auth';
 
-import styles from "./styles.module.scss";
-import { sideBarItems } from "./const";
+export default async function SideBar() {
+  const session = await auth();
+  console.log(session);
 
-export default function SideBar() {
-  const pathname = usePathname();
-
-  function renderItem({ title, list = [] }) {
-    return (
-      <li key={title}>
-        <span className={styles.category}>{title}</span>
-        {list.map((item) => {
-          const isActive = pathname === item.href;
-
-          return (
-            <Link
-              key={item.name}
-              data-is-active={String(isActive)}
-              href={item.href}
-              className={styles.link}
-            >
-              {item.icon}
-              {item.name}
-            </Link>
-          );
-        })}
-      </li>
-    );
+  async function handleLogOut() {
+    'use server';
+    await signOut();
   }
-
   return (
     <nav className={styles.wrapper}>
       <div className={styles.account}>
         <Image
           className={styles.avatar}
-          src="/profile.png"
+          src={session?.user?.image || "/profile.png"}
           alt="user"
           width={50}
           height={50}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: 'cover' }}
         />
         <div className={styles.user}>
-          <span className={styles.user__name}>Samuel Eto</span>
+          <span className={styles.user__name}>{session?.user?.username}</span>
           <span className={styles.user__position}>Administrator</span>
         </div>
       </div>
-      <ul>{(sideBarItems || []).map(renderItem)}</ul>
-      <button className={styles.logout}>
-        <MdLogout />
-        Logout
-      </button>
+      <ul>
+        {(sideBarItems || []).map(item => (
+          <RenderLink key={item.title} {...item} />
+        ))}
+      </ul>
+      <form action={handleLogOut}>
+        <button className={styles.logout}>
+          <MdLogout />
+          Logout
+        </button>
+      </form>
     </nav>
   );
 }
