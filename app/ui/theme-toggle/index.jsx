@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   }, [theme]);
 
   return (
-    <div className={styles.wrapper}>
+    <div title={theme} className={styles.wrapper}>
       <Select
         options={themeOptions}
         values={[

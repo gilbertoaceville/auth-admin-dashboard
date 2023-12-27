@@ -1,5 +1,5 @@
 .wrapper {
-  position: fixed;
+  position: absolute;
   top: rem(38px);
   right: rem(8px);
   z-index: 999;
@@ -18,6 +18,6 @@
     }
 
     & span {
-        font-size: 40px;
+        font-size: 25px;
     }
 }

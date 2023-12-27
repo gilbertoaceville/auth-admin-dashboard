@@ -10,6 +10,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/dashboard",
+        permanent: false,
+      }
+    ]
+  }
 };
 
 module.exports = (phase, { defaultConfig }) => {
@@ -18,7 +27,6 @@ module.exports = (phase, { defaultConfig }) => {
       includePaths: [path.join(__dirname, 'app/styles')],
       prependData: `@import "app/styles/_base.scss";`,
     };
-
   const config = {
     ...defaultConfig,
     ...nextConfig,
